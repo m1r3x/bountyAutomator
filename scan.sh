@@ -26,6 +26,7 @@ cat $domain/amass_sub.txt | httprobe -prefer-https > $domain/httprobe.txt
 echo "Running eyewitness"
 eyewitness -f $domain/httprobe.txt --web --no-prompt --threads 10 -d $domain/eyewitness
 
+
 echo "Running Gobuster"
 touch $domain/gobuster.txt
 input=$domain/httprobe.txt
